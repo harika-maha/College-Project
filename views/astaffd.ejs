@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/81ea002fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div class="top">
+        <div class="top1">
+            <img src="clogo.png">
+        </div>
+        <div class="top2">
+            <p class="top21">You choose, We do it</p>
+            <p class="top22">St. Joseph's College of Engineering</p>
+            <p class="top23">Department of computer Science & Engineering</p>
+        </div>
+        <div class="top3">
+            <img src="clogo1.PNG" class="top31">
+        </div>
+    </div>
+    <div class="outer">
+        <div class="nav">
+            <div class="head_section">
+              <img src="user.png" alt="">
+              <div class="name">
+                <h3><%=username%> </h3>
+              </div>
+            </div>
+            <div class="nav_links">
+              <ul>
+                <li><a href="details"><i class="fas fa-info-circle"></i><span>Staff Details</span></a></li>
+                <li><a href="addteacher"><i class="fas fa-user-plus"></i><span>Add Teacher</span></a></li>
+                <li><a href="addexam"><i class="fas fa-book-open"></i></i><span>Add Exam</span></a></li>
+                <li><a href="changepass"><i class="fas fa-key"></i><span>Change Password</span></a></li>
+                <li><a href="logout"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a></li>
+              </ul>
+            </div>
+          </div>
+    <div class="details">
+      <h3 id="head">Staff Details</h3>
+      <br>
+      <h4><span class="head1">Name :</span> <span class="head2"><%=name%></span></h4>
+      <br>
+      <h4><span class="head1">Username :</span> <span class="head2"><%=username%></span></h4>
+      <br>
+      <h4><span class="head1">Email :</span> <span class="head2"><%=email%></span></h4>
+      <br>
+      <h4><span class="head1">Post :</span> <span class="head2"><%=post%></span></h4>
+    </div>
+  </div>  
+  <script>
+  </script>
+</body>
+</html>  

@@ -1,0 +1,110 @@
+body {
+    background: skyblue;
+}
+label {
+    font-family: "Raleway" sans-serif;
+    font-size: 11pt;
+}
+#card {
+    width:329px;
+    height: 410px;
+    position: relative;
+    background: rgb(114, 112, 112);
+    border-radius: 8px;
+    margin: 10rem auto 8.1rem auto;
+    box-shadow: 0px 1px 18px black;
+}
+#card #circle {
+    position: absolute;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;    
+    top: -110px;
+    width: 50%;
+    height: 40%;
+    border: 10px solid skyblue;
+    border-radius: 50%;
+}
+.logo {
+    height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 6px solid white;
+}
+#card-content {
+    padding: 75px 44px;
+}
+#card-title {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;  
+}
+.emailicon {
+    padding-bottom: 25px;
+    padding: 6px;
+    background: rgb(221, 111, 21);
+    color: white;
+    min-width: 40px;
+    height: 26px;
+    text-align: center;
+    position: absolute;
+    top: 185px;
+}
+.passicon {
+    padding-bottom: 15px;
+    padding: 6px;
+    background: rgb(221, 111, 21);
+    color: white;
+    min-width: 40px;
+    height: 24px;
+    text-align: center;
+    position: absolute;
+}
+#submit-btn {
+    background: rgb(221, 111, 21);
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px rgb(77, 75, 75);
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    margin-top: 30px;
+    transition: 0.25s;
+    width: 153px;
+}
+#submit-btn:hover {
+    box-shadow: 0px 1px 18px rgb(245, 131, 38);
+}
+.form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+.form-content {
+    background: #fbfbfb;
+    border: 2px ;
+    outline: none;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    padding-left: 59px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: .3s;
+    margin: 8px 0;
+}
+.form-content:focus {
+    border: 2px solid rgb(214, 141, 4);
+}
+.sta{
+    color: red;
+    position: relative;
+    top: -10px;
+}

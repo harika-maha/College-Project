@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/81ea002fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div class="top">
+        <div class="top1">
+            <img src="clogo.png">
+        </div>
+        <div class="top2">
+            <p class="top21">You choose, We do it</p>
+            <p class="top22">St. Joseph's College of Engineering</p>
+            <p class="top23">Department of computer Science & Engineering</p>
+        </div>
+        <div class="top3">
+            <img src="clogo1.PNG" class="top31">
+        </div>
+    </div>
+    <div class="outer">
+        <div class="nav">
+            <div class="head_section">
+              <img src="user.png" alt="">
+              <div class="name">
+                <h3><%=username%></h3>
+              </div>
+            </div>
+            <div class="nav_links">
+              <ul>
+                <li><a href="details"><i class="fas fa-info-circle"></i><span>Staff Details</span></a></li>
+                <li><a href="addteacher"><i class="fas fa-user-plus"></i><span>Add Teacher</span></a></li>
+                <li><a href="addexam"><i class="fas fa-book-open"></i></i><span>Add Exam</span></a></li>
+                <li><a href="changepass"><i class="fas fa-key"></i><span>Change Password</span></a></li>
+                <li><a href="logout"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="upload" style="margin-bottom: 2%;">
+              <h3 style="margin-left: 35%;">Add Teacher</h3>
+              <form id=""method="POST" action="/aaddteacherdata">
+                <label for="batch">Batch :</label>
+                <input type="text" list="batch0" id="batch" autocomplete="off" name="batch">
+                <datalist id="batch0">
+                    <option  id="batch1"></option>
+                    <option  id="batch2"></option>
+                    <option  id="batch3"></option>
+                    <option  id="batch4"></option>
+                    <option  id="batch5"></option>         
+                </datalist>
+                <br>
+                <label for="sem">Semester :</label>
+                <input type="text" id="sem" list="sem0" disabled="disabled" autocomplete="off" name="semester">
+                <datalist id="sem0">
+                    <option  id="">Semester 1</option>
+                    <option  id="">Semester 2</option>
+                    <option  id="">Semester 3</option>
+                    <option  id="">Semester 4</option>
+                    <option  id="">Semester 5</option>
+                    <option  id="">Semester 6</option>
+                    <option  id="">Semester 7</option>
+                    <option  id="">Semester 8</option>        
+                </datalist>
+                <br>
+                <label for="sub" style="margin-left: 15%;">Subject:</label>
+                <input type="text" id="sub" required="required" autocomplete="off" name="subject">
+                <br>
+                <label for="uname" style="margin-left: 15%;">Username:</label>
+                <input type="text" id="uname" required="required" autocomplete="off" name="uname">
+                <br>
+                <label for="st" style="margin-left: 15%;position: relative;top: -10px;">New Staff:</label>
+                <input type="checkbox" style="position: relative;top: 5px;" id="st" autocomplete="off" name="new">
+                <br>
+                <label for="name" style="margin-left: 15%;">Name:</label>
+                <input type="text" id="name" required="required" autocomplete="off" disabled="disabled" name="name">
+                <br>
+                <label for="email" style="margin-left: 15%;">Email:</label>
+                <input type="text" id="email" required="required" autocomplete="off" disabled="disabled" name="email">
+                <br>               
+                 <label for="pass" style="margin-left: 15%;">Password:</label>
+                <input type="text" id="pass" required="required" autocomplete="off" disabled="disabled" name="pass">
+                <label for="pos" style="margin-left: 15%;">Post:</label>
+                <input type="text" id="pos" required="required" autocomplete="off" disabled="disabled" name="post">
+                <br>
+                <button type="submit" style="margin: 5% 0% 3% 45%;" id="sub">Submit</button>
+              </form>
+          </div>
+    </div>   
+    <script>
+        var y=new Date().getFullYear();
+        var stat='<%-st%>';
+        if(stat==0)
+        window.alert("Staff add Successfully");
+        if(stat==1)
+        window.alert("Staff Already Found");
+        for(i=0;i<5;i++)
+        document.getElementById("batch"+(i+1)).innerHTML=""+(y-i)+"-"+(y-i+4);
+        document.getElementById("batch").addEventListener("keyup",function(){
+        if(document.getElementById("batch").value.length>3)
+        document.getElementById("sem").removeAttribute("disabled");
+        if(document.getElementById("batch").value.length<9)
+        document.getElementById("sem").setAttribute("disabled","disabled");
+        });
+        var new1=0;
+        document.getElementById("st").addEventListener("click",function(){
+          if(new1==0)
+          {
+            document.getElementById("name").removeAttribute("disabled"); 
+            document.getElementById("email").removeAttribute("disabled");
+            document.getElementById("pass").removeAttribute("disabled");
+            document.getElementById("pos").removeAttribute("disabled");
+            new1=1;
+          }
+          else if(new1==1)
+          {
+            console.log(document.getElementById("st").value);
+            document.getElementById("name").removeAttribute("disabled");
+            document.getElementById("email").setAttribute("disabled","disabled");
+            document.getElementById("pass").setAttribute("disabled","disabled");
+            document.getElementById("pos").setAttribute("disabled","disabled");
+            new1=0; 
+          }
+        });
+    </script>   
+</body>
+</html>
